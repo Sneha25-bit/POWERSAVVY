@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POWERSAVVY Energy Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>POWERSAVVY: Track Your Energy Usage</h1>
+    
+    <!-- Form to collect user input -->
+    <form id="usageForm">
+        <label for="appliance">Appliance:</label>
+        <input type="text" id="appliance" name="appliance" required>
+
+        <label for="consumption">Consumption (kWh):</label>
+        <input type="number" id="consumption" name="consumption" required>
+
+        <label for="hours">Hours of Application:</label>
+        <input type="number" id="hours" name="hours" required>
+
+        <button type="submit">Add Appliance</button>
+    </form>
+    
+    <!-- Table to display input data -->
+    <table id="usageTable">
+        <thead>
+            <tr>
+                <th>Appliance</th>
+                <th>Consumption (kWh)</th>
+                <th>Hours of Application</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <!-- Canvas for the pie chart -->
+    <canvas id="energyChart" width="400" height="400"></canvas>
+    
+</body>
+</html>
